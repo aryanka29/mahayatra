@@ -12,7 +12,7 @@ import cities from "@/data/cities";
 import trains from "@/data/trains";
 
 export default function TrainsPage() {
-  const [results, setResults] = useState(trains.slice(0, 10));
+  const [results, setResults] = useState(trains.slice(0, 8));
 
   const handleSearch = ({ from, to }: any) => {
     const filtered = trains.filter(
@@ -23,77 +23,109 @@ export default function TrainsPage() {
 
   const TRAIN_FEATURES = [
     {
-      title: "Confirmed Ticket Chances",
+      title: "Higher Confirmation Chances 🚆",
       description:
-        "Increase confirmation probability with alternate train suggestions.",
+        "Improve your ticket confirmation probability with alternate train suggestions.",
     },
     {
-      title: "Secure Payments",
+      title: "100% Secure Payments 🔒",
       description:
-        "UPI, cards and net banking with fully encrypted transactions.",
+        "Pay safely using UPI, cards or net banking with encrypted transactions.",
     },
     {
-      title: "Free Cancellation",
+      title: "Free Cancellation 💸",
       description:
-        "Get full refunds with free cancellation on selected tickets.",
+        "Enjoy free cancellation and full refunds on eligible train tickets.",
     },
     {
-      title: "Live Train Status",
+      title: "Live Train Status 📍",
       description:
-        "Track your train location and running status in real time.",
+        "Track real-time running status and get platform & delay alerts.",
     },
     {
-      title: "Instant Refunds",
+      title: "Instant Refunds ⚡",
       description:
-        "Fast and hassle-free refunds directly to your payment method.",
+        "Get refunds quickly and hassle-free to your original payment method.",
     },
     {
-      title: "24×7 Support",
+      title: "24×7 Rail Support ☎️",
       description:
-        "Round-the-clock customer support for booking and enquiries.",
+        "Round-the-clock assistance for bookings, cancellations & enquiries.",
     },
   ];
 
   return (
-    <div className="bg-[#EADBD6] min-h-screen flex flex-col">
-      {/* TOP OFFERS */}
-      <OfferSlider title="Train Offers" folder="trains" />
+    <div className="bg-gradient-to-b from-[#F4ECE9] via-[#EEDFD9] to-[#EADBD6] min-h-screen pb-28">
 
-      {/* SEARCH BAR */}
-      <div className="px-6 mt-6">
-        <SearchBar
-          cities={cities}
-          placeholders={{
-            from: "From Station",
-            to: "To Station",
-          }}
-          buttonText="Search Trains"
-          onSearch={handleSearch}
-        />
+      {/* ================= TOP OFFERS ================= */}
+      <div className="shadow-sm">
+        <OfferSlider title="Train Offers" folder="trains" />
       </div>
 
-      {/* FILTER + RESULTS */}
-      <div className="px-6 mt-8 grid grid-cols-1 md:grid-cols-4 gap-6">
-        {/* LEFT */}
-        <div className="space-y-6">
-          <TrainFilters />
-          <div className="h-[360px]">
-            <VerticalOfferSlider type="trains" />
+      {/* ================= MAIN CONTAINER ================= */}
+      <div className="max-w-[1480px] mx-auto px-6 mt-12 space-y-12">
+
+        {/* ================= SEARCH SECTION ================= */}
+        <div className="bg-white rounded-[28px] shadow-xl border border-gray-100 p-6">
+          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
+            🚆 Search Train Tickets
+          </h2>
+
+          <SearchBar
+            cities={cities}
+            placeholders={{
+              from: "From Station",
+              to: "To Station",
+            }}
+            buttonText="Search Trains"
+            onSearch={handleSearch}
+          />
+        </div>
+
+        {/* ================= FILTER + RESULTS ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+
+          {/* -------- LEFT SIDEBAR -------- */}
+          <div className="space-y-10">
+
+            {/* FILTER CARD */}
+            <div className="bg-white rounded-[26px] shadow-lg border p-5">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                🎛 Filter & Preferences
+              </h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Filter trains by class, timing & availability
+              </p>
+              <TrainFilters />
+            </div>
+
+            {/* OFFERS CARD */}
+            <div className="bg-white rounded-[26px] shadow-lg border p-5 h-[850px]">
+              <h3 className="text-lg font-semibold text-gray-800 mb-3">
+                🎁 Exclusive Train Deals
+              </h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Special discounts on IRCTC bookings
+              </p>
+              <VerticalOfferSlider type="trains" />
+            </div>
+          </div>
+
+          {/* -------- RESULTS SECTION -------- */}
+          <div className="md:col-span-3">
+            <div className="bg-white rounded-[28px] shadow-xl border overflow-hidden">
+              <ResultsList data={results} type="Trains" />
+            </div>
           </div>
         </div>
 
-        {/* RIGHT */}
-        <div className="md:col-span-3">
-          <ResultsList data={results} type="Trains" />
+        {/* ================= WHY CHOOSE US ================= */}
+        <div className="bg-white rounded-[32px] shadow-xl border p-12">
+          <WhyChooseUs
+            heading="Why Book Train Tickets on MahaYatra?"
+            features={TRAIN_FEATURES}
+          />
         </div>
-      </div>
-
-      {/* WHY CHOOSE US */}
-      <div className="w-full mt-16 px-6">
-        <WhyChooseUs
-          heading="Why Book Train Tickets on MahaYatra"
-          features={TRAIN_FEATURES}
-        />
       </div>
     </div>
   );

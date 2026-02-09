@@ -1,22 +1,6 @@
 "use client";
+
 import { useState } from "react";
-
-const DESTINATIONS = [
-  "Mumbai","Pune","Nagpur","Nashik","Aurangabad",
-  "Kolhapur","Solapur","Satara","Ahmednagar",
-  "Latur","Nanded","Raigad","Ratnagiri",
-  "Lonavala","Mahabaleshwar","Pandharpur",
-  "Akola","Amravati","Beed","Jalgaon"
-];
-
-const ROOM_TYPES = [
-  "Single Room",
-  "Double Room",
-  "Family Room",
-  "Luxury Room",
-  "Pool View Room",
-  "Suite",
-];
 
 export default function HotelSearchBar({ onSearch }: any) {
   const [destination, setDestination] = useState("");
@@ -24,65 +8,49 @@ export default function HotelSearchBar({ onSearch }: any) {
   const [checkOut, setCheckOut] = useState("");
   const [roomType, setRoomType] = useState("");
 
-  const handleSubmit = () => {
-    onSearch({
-      destination,
-      checkIn,
-      checkOut,
-      roomType,
-    });
-  };
-
   return (
-    <div className="bg-white rounded-xl p-4 shadow-lg grid grid-cols-1 md:grid-cols-5 gap-4">
-      {/* Destination */}
-      <select
-        className="border p-2 rounded"
-        value={destination}
-        onChange={(e) => setDestination(e.target.value)}
-      >
-        <option value="">Select destination</option>
-        {DESTINATIONS.map((city) => (
-          <option key={city} value={city}>
-            {city}
-          </option>
-        ))}
+    <div className="bg-white rounded-2xl shadow-xl p-6 grid grid-cols-1 md:grid-cols-5 gap-4 border">
+
+      <select className="rounded-xl border px-3 py-2" onChange={(e) => setDestination(e.target.value)}>
+        <option>Destination</option>
+        <option>Mumbai</option>
+        <option>Pune</option>
+        <option>Nagpur</option>
+        <option>Nashik</option>
+        <option>Aurangabad</option>
+        <option>Solapur</option>
+        <option>Kolhapur</option>
+        <option>Satara</option>
+        <option>Ahmednagar</option>
+        <option>Akola</option>
+        <option>Amravati</option>
+        <option>Beed</option>
+        <option>Buldhana</option>
+        <option>Dhule</option>
+        <option>Jalgaon</option>
+        <option>Latur</option>
+        <option>Nanded</option>
+        <option>Raigad</option>
+        <option>Ratnagiri</option>
+        <option>Karad</option>
+        <option>Lonavala</option>
+        <option>Mahabaleshwar</option>
+        <option>Pandharpur</option>
       </select>
 
-      {/* Check-in */}
-      <input
-        type="date"
-        className="border p-2 rounded"
-        value={checkIn}
-        onChange={(e) => setCheckIn(e.target.value)}
-      />
+      <input type="date" className="rounded-xl border px-3 py-2" onChange={(e) => setCheckIn(e.target.value)} />
+      <input type="date" className="rounded-xl border px-3 py-2" onChange={(e) => setCheckOut(e.target.value)} />
 
-      {/* Check-out */}
-      <input
-        type="date"
-        className="border p-2 rounded"
-        value={checkOut}
-        onChange={(e) => setCheckOut(e.target.value)}
-      />
-
-      {/* Room type */}
-      <select
-        className="border p-2 rounded"
-        value={roomType}
-        onChange={(e) => setRoomType(e.target.value)}
-      >
-        <option value="">Room type</option>
-        {ROOM_TYPES.map((room) => (
-          <option key={room} value={room}>
-            {room}
-          </option>
-        ))}
+      <select className="rounded-xl border px-3 py-2" onChange={(e) => setRoomType(e.target.value)}>
+        <option>Room Type</option>
+        <option>Single</option>
+        <option>Double</option>
+        <option>Suite</option>
       </select>
 
-      {/* Search */}
       <button
-        onClick={handleSubmit}
-        className="bg-[#6B2F2F] text-white rounded font-semibold"
+        onClick={() => onSearch({ destination, checkIn, checkOut, roomType })}
+        className="bg-[#6B2F2F] hover:bg-[#552424] text-white rounded-xl font-semibold"
       >
         Search Hotels
       </button>

@@ -1,71 +1,112 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { logout } from "@/src/utils/auth";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const [user, setUser] = useState<any>(null);
 
+  /* ================= GET USER ================= */
+  useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+      setUser(JSON.parse(storedUser));
+    }
+  }, []);
+
+  /* ================= NAV LINK STYLE ================= */
   const navLinkClass = (path: string) =>
-    `px-3 py-2 rounded-lg text-sm font-medium transition
+    `flex items-center gap-1 px-3 py-2 rounded-lg text-sm font-medium transition
      ${
        pathname === path
-         ? "bg-[#C9ADA7] text-white"
-         : "text-[#4A4A4A] hover:bg-[#D8C5C0]"
+         ? "bg-[#8D5B4C] text-white shadow"
+         : "text-[#4A3A34] hover:bg-[#E5D6D0]"
      }`;
 
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-[#EADBD6] border-b border-[#D6C4BF]">
+    <header className="fixed top-0 left-0 w-full z-50 backdrop-blur bg-gradient-to-b from-[#F4ECE9]/90 to-[#EADBD6]/90 border-b border-[#E5D6D0]">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* LOGO */}
-        <Link
-          href="/"
-          className="text-2xl font-bold text-[#9A8C98] tracking-wide"
-        >
-          MahaYatra
+        {/* ================= LOGO ================= */}
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="MahaYatra Logo"
+            width={120}
+            height={120}
+            priority
+            className="rounded-md"
+          />
+          <span className="text-2xl font-bold tracking-wide text-[#4A3A34]">
+            MahaYatra
+          </span>
         </Link>
 
-        {/* NAV LINKS */}
+        {/* ================= NAV LINKS ================= */}
         <nav className="hidden md:flex items-center gap-2">
           <Link href="/buses" className={navLinkClass("/buses")}>
-            Buses
+            🚌 Buses
           </Link>
           <Link href="/trains" className={navLinkClass("/trains")}>
-            Trains
+            🚆 Trains
           </Link>
           <Link href="/cabs" className={navLinkClass("/cabs")}>
-            Cabs
+            🚕 Cabs
           </Link>
           <Link href="/hotels" className={navLinkClass("/hotels")}>
-            Hotels
+            🏨 Hotels
           </Link>
           <Link href="/offers" className={navLinkClass("/offers")}>
-            Offers
+            🎁 Offers
           </Link>
           <Link href="/track-ticket" className={navLinkClass("/track-ticket")}>
-            Track Ticket
+            ✍️ Feedback
           </Link>
           <Link href="/help" className={navLinkClass("/help")}>
-            Need Help
+            🤝 Help
           </Link>
         </nav>
 
-        {/* AUTH */}
-        <div className="flex items-center gap-3">
-          <Link
-            href="/auth/login"
-            className="text-sm font-semibold text-[#4A4A4A] hover:text-[#9A8C98]"
-          >
-            Login
-          </Link>
+        {/* ================= AUTH SECTION ================= */}
+        <div className="flex items-center gap-4">
+          {user ? (
+            <>
+              <span className="text-sm font-semibold text-[#4A3A34]">
+                Hi, <span className="font-bold">{user.name}</span>
+              </span>
 
-          <Link
-            href="/auth/signup"
-            className="text-sm font-semibold bg-[#9A8C98] text-white px-4 py-2 rounded-lg hover:bg-[#8A7C88] transition"
-          >
-            Sign Up
-          </Link>
+              <button
+                onClick={() => {
+                  logout();
+                  window.location.reload();
+                }}
+                className="text-sm font-semibold text-red-600 hover:text-red-700 transition"
+              >
+                Logout
+              </button>
+            </>
+          ) : (
+            <Link
+              href="/auth/login"
+              className="
+                text-sm font-semibold
+                bg-[#8D5B4C]
+                text-white
+                px-5 py-2
+                rounded-xl
+                shadow-md
+                hover:bg-[#73473A]
+                hover:shadow-lg
+                transition
+              "
+            >
+              Login
+            </Link>
+          )}
         </div>
 
       </div>

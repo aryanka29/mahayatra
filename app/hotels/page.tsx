@@ -7,7 +7,6 @@ import HotelSortBar from "@/components/HotelSortBar";
 import HotelFilters from "@/components/HotelFilters";
 import HotelResults from "@/components/HotelResults";
 import VerticalHotelSlider from "@/components/VerticalHotelSlider";
-import HotelImageSlider from "@/components/HotelImageSlider";
 import WhyChooseUs from "@/components/WhyChooseUs";
 
 import hotelsData from "@/data/hotels";
@@ -34,34 +33,34 @@ type HotelSearchData = {
 
 const HOTEL_FEATURES = [
   {
-    title: "Best Price Guarantee",
+    title: "🏷 Best Price Guarantee",
     description:
-      "Get hotels at the best available prices with exclusive MahaYatra deals.",
+      "Book hotels at the lowest available prices with exclusive MahaYatra offers.",
   },
   {
-    title: "Multiple Room Types",
+    title: "🛏 Multiple Room Categories",
     description:
-      "Choose from single, double, family, luxury and premium room categories.",
+      "Choose from single, double, family, luxury and premium rooms.",
   },
   {
-    title: "Free Cancellation Options",
+    title: "🔄 Free Cancellation",
     description:
-      "Flexible cancellation on select hotels with instant refunds.",
+      "Flexible cancellation with instant refunds on select hotels.",
   },
   {
-    title: "Verified Guest Reviews",
+    title: "⭐ Verified Guest Reviews",
     description:
-      "Make informed choices with genuine guest ratings and reviews.",
+      "Make informed choices using genuine guest ratings and reviews.",
   },
   {
-    title: "Secure Payments",
+    title: "🔐 Secure Payments",
     description:
-      "Safe and secure hotel bookings with UPI and multiple payment options.",
+      "UPI, cards & net banking with fully encrypted transactions.",
   },
   {
-    title: "24×7 Customer Support",
+    title: "📞 24×7 Support",
     description:
-      "Support team available anytime for hotel booking assistance.",
+      "Our hotel booking experts are available round-the-clock.",
   },
 ];
 
@@ -88,90 +87,64 @@ export default function HotelsPage() {
   };
 
   return (
-    <div className="bg-[#EADBD6] min-h-screen pb-16 centered">
-      <div className="max-w-[1400px] mx-auto px-6 pt-6 space-y-6">
+    <div className="bg-gradient-to-b from-[#EFE4E0] to-[#EADBD6] min-h-screen pb-20">
 
-        {/* SEARCH */}
-        <div className="bg-white rounded-2xl shadow-md p-5">
+      {/* ================= HERO / SEARCH ================= */}
+      <div className="max-w-[1400px] mx-auto px-6 pt-10 space-y-6">
+
+        <div className="text-center space-y-2">
+          <h1 className="text-3xl md:text-4xl font-bold text-[#4A3A34]">
+            🏨 Find the Perfect Stay
+          </h1>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Discover hotels, resorts & luxury stays at the best prices across India
+          </p>
+        </div>
+
+        <div className="bg-white rounded-3xl shadow-xl p-6 border">
           <HotelSearchBar onSearch={handleSearch} />
         </div>
 
-        {/* SORT */}
-        <div className="bg-white rounded-2xl shadow-sm p-4">
+        <div className="bg-white rounded-2xl shadow-md border px-4 py-3">
           <HotelSortBar sortBy={sortBy} setSortBy={setSortBy} />
         </div>
 
-        {/* MAIN GRID */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+        {/* ================= MAIN GRID ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* FILTERS */}
-          <div className="bg-white rounded-xl shadow-md border border-gray-200 p-4 h-fit">
+          <div className="sticky top-28 h-fit">
             <HotelFilters />
           </div>
 
-          {/* RESULTS – SAME STRUCTURE AS RESULTSLIST */}
-          <div className="md:col-span-3">
-            <div
-              className="
-                bg-white 
-                rounded-xl 
-                border 
-                border-gray-200 
-                shadow-md
-                h-[980px]
-                overflow-hidden
-                flex
-                flex-col
-                centered
-              "
-            >
-              {/* HEADER */}
-              <div className="px-5 py-4 border-b bg-[#FAF7F5]">
-                <h2 className="text-lg font-semibold text-gray-800">
-                  Hotel Results
-                </h2>
-                <p className="text-sm text-gray-500">
-                  {hotels.length} options available
-                </p>
-              </div>
+          {/* RESULTS */}
+          <div className="md:col-span-3 space-y-6">
 
-              {/* SCROLLABLE CONTENT */}
-              <div className="flex-1 overflow-y-auto px-5 py-4">
-                {!isSearched ? (
-                  <VerticalHotelSlider hotels={hotelsData} />
-                ) : (
-                  <div className="space-y-6">
-                    <HotelResults hotels={hotels} sortBy={sortBy} />
-                    <HotelImageSlider images={hotels[0]?.images ?? []} />
-                  </div>
-                )}
+            {/* DISCOVERY SLIDER */}
+            {!isSearched && (
+              <div >
+                <h2 className="text-xl font-semibold text-[#4A3A34] mb-4">
+                  ✨ Popular Hotels & Trending Stays
+                </h2>
+                <VerticalHotelSlider hotels={hotelsData} />
               </div>
-            </div>
+            )}
+
+            {/* SEARCH RESULTS */}
+            {isSearched && (
+              <div className="bg-white rounded-3xl shadow-xl border">
+                <HotelResults hotels={hotels} sortBy={sortBy} />
+              </div>
+            )}
           </div>
         </div>
 
-        {/* WHY CHOOSE US – FULL WIDTH */}
-        <div className="mt-16 bg-white rounded-2xl shadow-md p-8">
+        {/* ================= WHY CHOOSE US ================= */}
+        <div className="mt-20 bg-white rounded-3xl shadow-xl p-12 border">
           <WhyChooseUs
-            heading="Why Book Hotels on MahaYatra"
+            heading="Why Book Hotels on MahaYatra?"
             features={HOTEL_FEATURES}
           />
-          <button
-                className="
-                  mt-4
-                  bg-[#8D5B4C]
-                  hover:bg-[#73473A]
-                  text-white
-                  text-sm
-                  font-semibold
-                  px-5
-                  py-2
-                  rounded-lg
-                  transition
-                "
-              >
-                Book Now
-              </button>
         </div>
       </div>
     </div>

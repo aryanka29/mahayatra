@@ -21,7 +21,7 @@ const hotels = [
     pricePerNight: 6200,
     amenities: ["Free WiFi", "Pool", "Breakfast", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mumbai1.jpg", "/hotels/mumbai2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/taj-land-ends-mumbai.jpg", "https://www.tourmyindia.com/states/maharashtra/images/mirage-hotel-mumbai.jpg"],
   },
   {
     id: 2,
@@ -32,7 +32,7 @@ const hotels = [
     pricePerNight: 5400,
     amenities: ["Sea View", "AC", "Free WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mumbai3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/trident-nariman-point-mumbai.jpg"],
   },
   {
     id: 3,
@@ -43,7 +43,7 @@ const hotels = [
     pricePerNight: 4800,
     amenities: ["Breakfast", "Lift", "24x7 Service"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mumbai4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/oriental-aster-mumbai.jpg"],
   },
   {
     id: 4,
@@ -54,7 +54,7 @@ const hotels = [
     pricePerNight: 4300,
     amenities: ["Free WiFi", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mumbai5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/taj-santacruz-mumbai.jpg"],
   },
   {
     id: 5,
@@ -65,7 +65,7 @@ const hotels = [
     pricePerNight: 8200,
     amenities: ["Luxury", "Pool", "Spa", "Sea View"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mumbai6.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/grand-hyatt-mumbai.jpg"],
   },
 
   /* ===================== PUNE ===================== */
@@ -78,7 +78,7 @@ const hotels = [
     pricePerNight: 5200,
     amenities: ["Free WiFi", "Gym", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pune1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/marigold-residency-mumbai.jpg"],
   },
   {
     id: 7,
@@ -89,7 +89,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["AC", "Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pune2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/regent-hotel-mumbai.jpg"],
   },
   {
     id: 8,
@@ -100,7 +100,7 @@ const hotels = [
     pricePerNight: 3900,
     amenities: ["Business Center", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pune3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/t-24-residency-mumbai.jpg"],
   },
   {
     id: 9,
@@ -111,7 +111,7 @@ const hotels = [
     pricePerNight: 4800,
     amenities: ["Hill View", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pune4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/the-ambassador-mumbai.jpg"],
   },
   {
     id: 10,
@@ -122,7 +122,7 @@ const hotels = [
     pricePerNight: 6900,
     amenities: ["Luxury", "Spa", "Fine Dining"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pune5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/the-mirador-mumbai.jpg"],
   },
 
   /* ===================== NAGPUR ===================== */
@@ -135,7 +135,7 @@ const hotels = [
     pricePerNight: 4100,
     amenities: ["AC", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nagpur1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/the-residence-hotel-mumbai.jpg"],
   },
   {
     id: 12,
@@ -146,7 +146,7 @@ const hotels = [
     pricePerNight: 5600,
     amenities: ["Pool", "Gym"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nagpur2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/grand-hotel-mumbai.jpg"],
   },
   {
     id: 13,
@@ -157,7 +157,7 @@ const hotels = [
     pricePerNight: 3600,
     amenities: ["WiFi", "Lift"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nagpur3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-hiltop--mumbai.jpg"],
   },
   {
     id: 14,
@@ -168,7 +168,7 @@ const hotels = [
     pricePerNight: 6400,
     amenities: ["Luxury", "Spa"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nagpur4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-airport-international-mumbai.jpg"],
   },
   {
     id: 15,
@@ -179,7 +179,7 @@ const hotels = [
     pricePerNight: 3100,
     amenities: ["Budget Friendly"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nagpur5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-marine-plaza-mumbai.jpg"],
   },
 
   /* ===================== NASHIK ===================== */
@@ -192,7 +192,7 @@ const hotels = [
     pricePerNight: 7200,
     amenities: ["Vineyard View", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nashik1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-sea-princess-mumbai.jpg"],
   },
   {
     id: 17,
@@ -203,7 +203,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["River View"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nashik2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hyatt-regency-mumbai.jpg"],
   },
   {
     id: 18,
@@ -214,7 +214,7 @@ const hotels = [
     pricePerNight: 3900,
     amenities: ["Temple Nearby"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nashik3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/t2-beacon-mumbai.jpg"],
   },
   {
     id: 19,
@@ -225,7 +225,7 @@ const hotels = [
     pricePerNight: 7600,
     amenities: ["Luxury", "Spa"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nashik4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/chateau-windsor-hotel-mumbai.jpg"],
   },
   {
     id: 20,
@@ -236,7 +236,7 @@ const hotels = [
     pricePerNight: 2800,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nashik5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/citizen-hotel-mumbai.jpg"],
   },
     /* ===================== AURANGABAD ===================== */
   {
@@ -248,7 +248,7 @@ const hotels = [
     pricePerNight: 5200,
     amenities: ["Near Ajanta", "Pool", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/aur1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-silver-inn-mumbai.jpg"],
   },
   {
     id: 22,
@@ -259,7 +259,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["Breakfast", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/aur2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/fariyas-hotel-mumbai.jpg"],
   },
   {
     id: 23,
@@ -270,7 +270,7 @@ const hotels = [
     pricePerNight: 3600,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/aur3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/the-sahil-hotel-mumbai.jpg"],
   },
   {
     id: 24,
@@ -281,7 +281,7 @@ const hotels = [
     pricePerNight: 7100,
     amenities: ["Luxury", "Spa"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/aur4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/svenska-design-hotel-mumbai.jpg"],
   },
   {
     id: 25,
@@ -292,7 +292,7 @@ const hotels = [
     pricePerNight: 2900,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/aur5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/the-emerald-mumbai.jpg"],
   },
 
   /* ===================== SOLAPUR ===================== */
@@ -305,7 +305,7 @@ const hotels = [
     pricePerNight: 4100,
     amenities: ["Near Temple", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sol1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/itc-grand-central-mumbai.jpg"],
   },
   {
     id: 27,
@@ -316,7 +316,7 @@ const hotels = [
     pricePerNight: 3600,
     amenities: ["AC", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sol2.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/itc-maratha-mumbai.jpg"],
   },
   {
     id: 28,
@@ -327,7 +327,7 @@ const hotels = [
     pricePerNight: 3300,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sol3.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/meluha-the-fern-mumbai.jpg"],
   },
   {
     id: 29,
@@ -338,7 +338,7 @@ const hotels = [
     pricePerNight: 6400,
     amenities: ["Luxury", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sol4.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/novotel-juhu-beach.jpg"],
   },
   {
     id: 30,
@@ -349,7 +349,7 @@ const hotels = [
     pricePerNight: 2600,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sol5.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/goldfinch-hotel-mumbai.jpg"],
   },
 
   /* ===================== KOLHAPUR ===================== */
@@ -362,7 +362,7 @@ const hotels = [
     pricePerNight: 5400,
     amenities: ["Near Mahalaxmi", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kol1.jpg"],
+    images: ["https://www.tourmyindia.com/states/maharashtra/images/hotel-transit-mumbai.jpg"],
   },
   {
     id: 32,
@@ -373,7 +373,7 @@ const hotels = [
     pricePerNight: 4800,
     amenities: ["Heritage"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kol2.jpg"],
+    images: ["https://media.istockphoto.com/id/1319453433/photo/modern-luxury-house-with-private-infinity-pool-in-dusk.jpg?s=612x612&w=0&k=20&c=WDWGyEZfDp8Qi2OI6m9RrNPHdnj5EPVBLvVi0IP7K74="],
   },
   {
     id: 33,
@@ -384,7 +384,7 @@ const hotels = [
     pricePerNight: 3700,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kol3.jpg"],
+    images: ["https://media.istockphoto.com/id/488120139/photo/modern-real-estate.jpg?s=612x612&w=0&k=20&c=88jk1VLSoYboMmLUx173sHs_XrZ9pH21as8lC7WINQs="],
   },
   {
     id: 34,
@@ -395,7 +395,7 @@ const hotels = [
     pricePerNight: 6900,
     amenities: ["Luxury", "Spa"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kol4.jpg"],
+    images: ["https://media.istockphoto.com/id/907614450/photo/luxury-resort-hotel-with-swimming-pool-at-sunset.jpg?s=612x612&w=0&k=20&c=eUijzw-MkPw00HAw464I3mwa4b17yhrfvh5HiGZiEqo="],
   },
   {
     id: 35,
@@ -406,7 +406,7 @@ const hotels = [
     pricePerNight: 2800,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kol5.jpg"],
+    images: ["https://media.istockphoto.com/id/503019528/photo/road-front-of-luxury-building-in-clear-sky-at-night.jpg?s=612x612&w=0&k=20&c=xkjUByXNE5SdMSeYxLqIwweZMg9XZ6xnWEK7ypdeO4I="],
   },
 
   /* ===================== SATARA ===================== */
@@ -419,7 +419,7 @@ const hotels = [
     pricePerNight: 5100,
     amenities: ["Hill View", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sat1.jpg"],
+    images: ["https://media.istockphoto.com/id/949087660/photo/fountain-at-complex-of-apartment-residential-buildings-quarter.jpg?s=612x612&w=0&k=20&c=PZRDszGRmGaM8YR-4GUGoYnYjpplLvKb6TSENjrRuwQ="],
   },
   {
     id: 37,
@@ -430,7 +430,7 @@ const hotels = [
     pricePerNight: 3900,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sat2.jpg"],
+    images: ["https://media.istockphoto.com/id/1165384568/photo/europe-modern-complex-of-residential-buildings.jpg?s=612x612&w=0&k=20&c=iW4NBiMPKEuvaA7h8wIsPHikhS64eR-5EVPfjQ9GPOA="],
   },
   {
     id: 38,
@@ -441,7 +441,7 @@ const hotels = [
     pricePerNight: 3400,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sat3.jpg"],
+    images: ["https://media.istockphoto.com/id/827319750/photo/hawaii-hotels-at-waikiki-beach.jpg?s=612x612&w=0&k=20&c=cK53jWFYqs8m6POo3qYWWv5_8K-ytYpT1_5KLUb0kds="],
   },
   {
     id: 39,
@@ -452,7 +452,7 @@ const hotels = [
     pricePerNight: 6800,
     amenities: ["Luxury", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sat4.jpg"],
+    images: ["https://media.istockphoto.com/id/151567458/photo/hotel-with-empty-lot.jpg?s=612x612&w=0&k=20&c=6aHyjxmHz6F7NB1VtgL1DLbcPQ2A_Pv7B6R9bpIi3JU="],
   },
   {
     id: 40,
@@ -463,7 +463,7 @@ const hotels = [
     pricePerNight: 2700,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/sat5.jpg"],
+    images: ["https://media.istockphoto.com/id/903175876/photo/deluxe-hotel-and-casino-resort-in-macao.jpg?s=612x612&w=0&k=20&c=x9SLdBX2sKUsNjQbTFbio_oqVAQ5pO5NhL82S9hxLVI="],
   },
 
   /* ===================== AHMEDNAGAR ===================== */
@@ -476,7 +476,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["WiFi", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/ahm1.jpg"],
+    images: ["https://media.istockphoto.com/id/497640927/photo/commercial-office-buildings-exterior-evening-view-at-bottom-sky.jpg?s=612x612&w=0&k=20&c=9uFfPYj1hCRlRnXeLSjBvb_IdpKphgL_82FQfKCRUg8="],
   },
   {
     id: 42,
@@ -487,7 +487,7 @@ const hotels = [
     pricePerNight: 3500,
     amenities: ["AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/ahm2.jpg"],
+    images: ["https://media.istockphoto.com/id/183320144/photo/large-luxury-retirement-habitations.jpg?s=612x612&w=0&k=20&c=QjXJiEnNbnJ72Qg5zW875qlmb7UFQz1T0LrjVJ37d6w="],
   },
   {
     id: 43,
@@ -498,7 +498,7 @@ const hotels = [
     pricePerNight: 3800,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/ahm3.jpg"],
+    images: ["https://media.istockphoto.com/id/183018477/photo/resort-entrance.jpg?s=612x612&w=0&k=20&c=Xcov8kvryCVS5iGcTO3YOcRhW_Cln1H5dTldopM1Qww="],
   },
   {
     id: 44,
@@ -509,7 +509,7 @@ const hotels = [
     pricePerNight: 6500,
     amenities: ["Luxury", "Spa"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/ahm4.jpg"],
+    images: ["https://media.istockphoto.com/id/1340782166/photo/corporate-building-in-financial-district.jpg?s=612x612&w=0&k=20&c=yIgHxHCUv3YTOf9yF2vI4frgh2z5xsVoOhfy8GC1FSw="],
   },
   {
     id: 45,
@@ -520,7 +520,7 @@ const hotels = [
     pricePerNight: 2600,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/ahm5.jpg"],
+    images: ["https://media.istockphoto.com/id/1159873271/photo/residential-area-in-the-city-modern-apartment-buildings.jpg?s=612x612&w=0&k=20&c=edI11N5XbGUx26oYlpMPRipqjNM86aiEpCM1PfuypPw="],
   },
   /* ===================== AKOLA ===================== */
   {
@@ -532,7 +532,7 @@ const hotels = [
     pricePerNight: 3400,
     amenities: ["WiFi", "Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/akola1.jpg"],
+    images: ["https://media.istockphoto.com/id/1743685173/photo/a-beautiful-deck-with-round-wicker-armchairs-outdoor-string-lights-and-a-nature-view-at-night.jpg?s=612x612&w=0&k=20&c=7sFNB3cPE-q4vhCO65bWIdXAo4qRquIF8ksWftX-z2I="],
   },
   {
     id: 47,
@@ -543,7 +543,7 @@ const hotels = [
     pricePerNight: 3000,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/akola2.jpg"],
+    images: ["https://media.istockphoto.com/id/1467742991/photo/tourist-resort-at-sunset.jpg?s=612x612&w=0&k=20&c=xROsYFdlXHyphRpgL4_rHwfY36VgSpCaMQU5qjYOvmM="],
   },
   {
     id: 48,
@@ -554,7 +554,7 @@ const hotels = [
     pricePerNight: 2500,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/akola3.jpg"],
+    images: ["https://media.istockphoto.com/id/178842131/photo/door-to-office.jpg?s=612x612&w=0&k=20&c=3Ci4NchY3YUEXJE-u6SiM9NSVKM7ILpK3EOoiPb-LZ8="],
   },
 
   /* ===================== AMRAVATI ===================== */
@@ -567,7 +567,7 @@ const hotels = [
     pricePerNight: 3600,
     amenities: ["WiFi", "AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/amr1.jpg"],
+    images: ["https://media.istockphoto.com/id/1292354654/photo/hotel-reception-lobby.jpg?s=612x612&w=0&k=20&c=D6GKWcJI2TFvq-j-R6vPZoNnSXz1dFyy3WIfU1Q0L50="],
   },
   {
     id: 50,
@@ -578,7 +578,7 @@ const hotels = [
     pricePerNight: 3200,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/amr2.jpg"],
+    images: ["https://media.istockphoto.com/id/522540838/photo/lifestyle-apartments.jpg?s=612x612&w=0&k=20&c=n3ICXWHcJ74fOjy4Kbv_cu7tA7KwH82g4OxVGpiHK9U="],
   },
   {
     id: 51,
@@ -589,7 +589,7 @@ const hotels = [
     pricePerNight: 2700,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/amr3.jpg"],
+    images: ["https://media.istockphoto.com/id/1408718848/photo/green-eco-building-in-the-city-green-architecture.jpg?s=612x612&w=0&k=20&c=6bJ0uetNSyqePGt8AoPdIjAcj9qk5j7afEF8gSgLYUY="],
   },
 
   /* ===================== BEED ===================== */
@@ -602,7 +602,7 @@ const hotels = [
     pricePerNight: 3300,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/beed1.jpg"],
+    images: ["https://media.istockphoto.com/id/1318834610/photo/white-modern-skyscraper-perfect-symmetry-with-blue-sky-and-copy-space.jpg?s=612x612&w=0&k=20&c=H0hkiV0r8t1FGDDqzI4kASOHzRIy-W_zYEe6iDLKBA4="],
   },
   {
     id: 53,
@@ -613,7 +613,7 @@ const hotels = [
     pricePerNight: 2900,
     amenities: ["AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/beed2.jpg"],
+    images: ["https://media.istockphoto.com/id/636778074/photo/modern-building-gate.jpg?s=612x612&w=0&k=20&c=no61rYa99IZRROmhki6YqiplW6qPznUHvUnvwARjoc4="],
   },
   {
     id: 54,
@@ -624,7 +624,7 @@ const hotels = [
     pricePerNight: 2400,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/beed3.jpg"],
+    images: ["https://media.istockphoto.com/id/2165399449/photo/modern-apartment-building-on-blue-sky-and-sea-background-beautiful-architecture-detail.jpg?s=612x612&w=0&k=20&c=05ka6uAeRRUMgdKE4OsowIlTqIpLKOp5zzGmNG5iXUA="],
   },
 
   /* ===================== BULDHANA ===================== */
@@ -637,7 +637,7 @@ const hotels = [
     pricePerNight: 3200,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/bul1.jpg"],
+    images: ["https://media.istockphoto.com/id/1170143183/photo/eu-residential-skyscraper-building-bedroom-suburb-baltupiai-district.jpg?s=612x612&w=0&k=20&c=1T3D7vjLako3Pju6FKtoqZ5uTFXn-QXoQuoW_WAwLyA="],
   },
   {
     id: 56,
@@ -648,7 +648,7 @@ const hotels = [
     pricePerNight: 2900,
     amenities: ["Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/bul2.jpg"],
+    images: ["https://media.istockphoto.com/id/1540164261/photo/luxury-house-with-swimming-pool-at-night.jpg?s=612x612&w=0&k=20&c=Kn3PlF8SLKpfr23NV2DZbWWPrIQU5OBf6mwz4JXfWAE="],
   },
   {
     id: 57,
@@ -659,7 +659,7 @@ const hotels = [
     pricePerNight: 2400,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/bul3.jpg"],
+    images: ["https://media.istockphoto.com/id/1418784247/photo/luxury-hotel-lobby.jpg?s=612x612&w=0&k=20&c=6acpCJL56bu5DMs8LwkdY246wlH2eRFci0MKVyycLJw="],
   },
 
   /* ===================== DHULE ===================== */
@@ -672,7 +672,7 @@ const hotels = [
     pricePerNight: 3400,
     amenities: ["WiFi", "AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/dhule1.jpg"],
+    images: ["https://media.istockphoto.com/id/1398625179/photo/glass-window-building-of-new-office-space.jpg?s=612x612&w=0&k=20&c=s6KQQZhFl-Q3ctet03n5kB60JOJbwSXFbpJhCW1Dx4s="],
   },
   {
     id: 59,
@@ -683,7 +683,7 @@ const hotels = [
     pricePerNight: 3000,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/dhule2.jpg"],
+    images: ["https://media.istockphoto.com/id/183886840/photo/a-woman-in-a-oil-overlooking-phuket-thailand.jpg?s=612x612&w=0&k=20&c=WYZ7T9m0yh6njHqq1ePGbYlLMjdigVbdL6Wo5OxVAqc="],
   },
   {
     id: 60,
@@ -694,7 +694,7 @@ const hotels = [
     pricePerNight: 2600,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/dhule3.jpg"],
+    images: ["https://media.istockphoto.com/id/1359359278/photo/modern-luxury-house-with-private-swimming-pool-in-dawn.jpg?s=612x612&w=0&k=20&c=lt77e-8z4EJZMR1B0rP4OySy0HtTdfazsA_trsredWo="],
   },
 
   /* ===================== JALGAON ===================== */
@@ -707,7 +707,7 @@ const hotels = [
     pricePerNight: 3500,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/jal1.jpg"],
+    images: ["https://media.istockphoto.com/id/838103468/photo/interior-view-of-gorgeous-hotel.jpg?s=612x612&w=0&k=20&c=peSg1FxZfAonlNQlB_4Pu-d-4T60imo_YkvmVWMTbYI="],
   },
   {
     id: 62,
@@ -718,7 +718,7 @@ const hotels = [
     pricePerNight: 3100,
     amenities: ["Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/jal2.jpg"],
+    images: ["https://media.istockphoto.com/id/1401582615/photo/residential-buildings-in-a-new-city-district.jpg?s=612x612&w=0&k=20&c=ppnmeTsrJRvFJZvDS1jl7UA4H6AAsq-_p5lY58p4f8g="],
   },
   {
     id: 63,
@@ -729,7 +729,7 @@ const hotels = [
     pricePerNight: 2700,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/jal3.jpg"],
+    images: ["https://media.istockphoto.com/id/1127251935/photo/glass-window-with-glowing-crowded-city.jpg?s=612x612&w=0&k=20&c=uDLHiogKBY0KrxnbvfQQBMxBAR0llu4CxfF6_9QAYWI="],
   },
 
   /* ===================== LATUR ===================== */
@@ -742,7 +742,7 @@ const hotels = [
     pricePerNight: 3800,
     amenities: ["WiFi", "AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lat1.jpg"],
+    images: ["https://media.istockphoto.com/id/1161036960/photo/residential-area-with-apartment-buildings-in-the-city.jpg?s=612x612&w=0&k=20&c=KrKhLVT7eu49F9IhkK67ShHoMzZEuy556fRJ1OG62pU="],
   },
   {
     id: 65,
@@ -753,7 +753,7 @@ const hotels = [
     pricePerNight: 3400,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lat2.jpg"],
+    images: ["https://media.istockphoto.com/id/636484304/photo/hotel-resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=Q_RbLBOsInZv5-Nes7POUbcTSeAv2EG4h5Wh58UDinc="],
   },
   {
     id: 66,
@@ -764,7 +764,7 @@ const hotels = [
     pricePerNight: 2900,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lat3.jpg"],
+    images: ["https://media.istockphoto.com/id/1447622263/photo/town-square-with-apartments-and-stores-at-night.jpg?s=612x612&w=0&k=20&c=CJFUrc719uxdWgReDjMUWNV1iq6K57eOmuY7UUJyPjE="],
   },
 
   /* ===================== NANDED ===================== */
@@ -777,7 +777,7 @@ const hotels = [
     pricePerNight: 3600,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nan1.jpg"],
+    images: ["https://media.istockphoto.com/id/1185256981/photo/detail-in-modern-residential-apartment-flat-building-exterior.jpg?s=612x612&w=0&k=20&c=RG_cj-Okn9EanWZOdkYk4fp1HXE14EjzBo3CMxY7bnU="],
   },
   {
     id: 68,
@@ -788,7 +788,7 @@ const hotels = [
     pricePerNight: 3300,
     amenities: ["AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nan2.jpg"],
+    images: ["https://media.istockphoto.com/id/1175087433/photo/historical-building-with-marble-facade-at-berlin.jpg?s=612x612&w=0&k=20&c=5v4kg-TL9iwdmQ-nXqvW7nkX6Z49YnvRJtU0grt6Sw4="],
   },
   {
     id: 69,
@@ -799,7 +799,7 @@ const hotels = [
     pricePerNight: 2800,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/nan3.jpg"],
+    images: ["https://media.istockphoto.com/id/120480931/photo/resort-swimming-pool.jpg?s=612x612&w=0&k=20&c=UICNtgzh66BR_Di0z7kT3GSk3uhq6E3w9exrXnw8lWY="],
   },
 
   /* ===================== RAIGAD ===================== */
@@ -812,7 +812,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["Hill View", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rai1.jpg"],
+    images: ["https://media.istockphoto.com/id/547025510/photo/elegant-stools-and-talbe-in-huge-and-bright-hall.jpg?s=612x612&w=0&k=20&c=dY5krMD8fDCDhIsubN4b2Mbvn8kFFuOJu35OEEsx9YU="],
   },
   {
     id: 71,
@@ -823,7 +823,7 @@ const hotels = [
     pricePerNight: 3700,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rai2.jpg"],
+    images: ["https://media.istockphoto.com/id/154210279/photo/steel-and-glass-building.jpg?s=612x612&w=0&k=20&c=BoGgwFNhDxEoksmlzNrwUlQeV3hZv55cmyoK_YcGZ3Q="],
   },
   {
     id: 72,
@@ -834,7 +834,7 @@ const hotels = [
     pricePerNight: 3000,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rai3.jpg"],
+    images: ["https://media.istockphoto.com/id/924889844/photo/city-apartments-in-paris-france.jpg?s=612x612&w=0&k=20&c=BL8Krp_h5ILypao8siu92-yP-71oxyXDQlKmzBx1AjA="],
   },
 
   /* ===================== RATNAGIRI ===================== */
@@ -847,7 +847,7 @@ const hotels = [
     pricePerNight: 4500,
     amenities: ["Sea View", "WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rat1.jpg"],
+    images: ["https://media.istockphoto.com/id/1157525825/photo/modern-apartment-buildings.jpg?s=612x612&w=0&k=20&c=3FYeLpBDu-8599WTxWZDyPgxPrfLiEJ-AMZlA3xTx6s="],
   },
   {
     id: 74,
@@ -858,7 +858,7 @@ const hotels = [
     pricePerNight: 4000,
     amenities: ["AC"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rat2.jpg"],
+    images: ["https://media.istockphoto.com/id/173818627/photo/modern-illuminated-hotel-building-at-night.jpg?s=612x612&w=0&k=20&c=_XEo5CXgqW-ctxNC0hTUn-Ck94yplL5-Ozvz8Lw0RGQ="],
   },
   {
     id: 75,
@@ -869,7 +869,7 @@ const hotels = [
     pricePerNight: 3300,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/rat3.jpg"],
+    images: ["https://media.istockphoto.com/id/172201725/photo/large-beige-resort-hotel.jpg?s=612x612&w=0&k=20&c=Pguw95dq1Zl4Vezvz9moNmmNNshw8wDMi0lRMKE_v5Y="],
   },
 
   /* ===================== KARAD ===================== */
@@ -882,7 +882,7 @@ const hotels = [
     pricePerNight: 3400,
     amenities: ["WiFi"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kar1.jpg"],
+    images: ["https://media.istockphoto.com/id/1084106348/photo/apartment-home-residential-building-complex-street-parking.jpg?s=612x612&w=0&k=20&c=CO0zL7cmvkw1r4mvEc0JTC9s2uyhYV9pOhuGuZF9NHU="],
   },
   {
     id: 77,
@@ -893,7 +893,7 @@ const hotels = [
     pricePerNight: 3000,
     amenities: ["Parking"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kar2.jpg"],
+    images: ["https://media.istockphoto.com/id/467769285/photo/beautiful-historic-buildings-in-miami.jpg?s=612x612&w=0&k=20&c=hGKvkrcolXwAjBtyckhN-Ew08wK_TFIjvBOhQGsZDD4="],
   },
   {
     id: 78,
@@ -904,7 +904,7 @@ const hotels = [
     pricePerNight: 2600,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/kar3.jpg"],
+    images: ["https://media.istockphoto.com/id/1157525858/photo/modern-skyscraper-in-the-city-center.jpg?s=612x612&w=0&k=20&c=XCNw5yZEzMwz4t6UsWonGGQOk_hZrM5JwufFuGrMEPM="],
   },
 
   /* ===================== LONAVALA ===================== */
@@ -917,7 +917,7 @@ const hotels = [
     pricePerNight: 6200,
     amenities: ["Hill View", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lon1.jpg"],
+    images: ["https://media.istockphoto.com/id/1222228710/photo/luxury-house-with-infinity-pool.jpg?s=612x612&w=0&k=20&c=ytvxOHw7iB9j8kk6F7hdF_gGm6Z7NaB48JLFmcve0Vc="],
   },
   {
     id: 80,
@@ -928,7 +928,7 @@ const hotels = [
     pricePerNight: 5400,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lon2.jpg"],
+    images: ["https://media.istockphoto.com/id/144723536/photo/looking-up-at-a-modern-apartment-building.jpg?s=612x612&w=0&k=20&c=MxRJd5Y_VYLW493H_y02vZvjKhkWAg_y9D8Q1oZ65CY="],
   },
   {
     id: 81,
@@ -939,7 +939,7 @@ const hotels = [
     pricePerNight: 4200,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/lon3.jpg"],
+    images: ["https://media.istockphoto.com/id/175008615/photo/raffles-hotel.jpg?s=612x612&w=0&k=20&c=qFv6_KSgQuGPXOO4MDBUKOCppTUO9Pky5Bq5ekxkFWU="],
   },
 
   /* ===================== MAHABALESHWAR ===================== */
@@ -952,7 +952,7 @@ const hotels = [
     pricePerNight: 6800,
     amenities: ["Valley View", "Pool"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mah1.jpg"],
+    images: ["https://media.istockphoto.com/id/1299097228/photo/florida-beach-resort-aerial.jpg?s=612x612&w=0&k=20&c=JKn3YxrC3yTc0B_rW0QBAmjhjtx3sY0kY2bX4wnOQ8o="],
   },
   {
     id: 83,
@@ -963,7 +963,7 @@ const hotels = [
     pricePerNight: 5600,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mah2.jpg"],
+    images: ["https://media.istockphoto.com/id/177365066/photo/palm-trees-and-condos-maui.jpg?s=612x612&w=0&k=20&c=U67rUB-G5NawsrNkV0HPJwnyzPQ8SMLZTO10Ct0SaWQ="],
   },
   {
     id: 84,
@@ -974,7 +974,7 @@ const hotels = [
     pricePerNight: 4500,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/mah3.jpg"],
+    images: ["https://media.istockphoto.com/id/1198357646/photo/luxury-apartment-with-private-pool.jpg?s=612x612&w=0&k=20&c=DppEBRtR0seXZzvN02VgbtNaNYGyT1Sn0vfL1R3lr6Q="],
   },
 
   /* ===================== PANDHARPUR ===================== */
@@ -987,7 +987,7 @@ const hotels = [
     pricePerNight: 3500,
     amenities: ["Near Temple"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pan1.jpg"],
+    images: ["https://media.istockphoto.com/id/170615066/photo/white-south-beach-condo-with-palm-trees.jpg?s=612x612&w=0&k=20&c=KMGKtAUqdG6tqYq-tmrDrOl4lIMN8Q_DULfvDj5yd5o="],
   },
   {
     id: 86,
@@ -998,7 +998,7 @@ const hotels = [
     pricePerNight: 3100,
     amenities: ["Breakfast"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pan2.jpg"],
+    images: ["https://media.istockphoto.com/id/174667035/photo/french-architectur-in-paris.jpg?s=612x612&w=0&k=20&c=8yu3NzBH9Xxq63vMojfQ1YBaRWMyvdra_m9qTUHiam0="],
   },
   {
     id: 87,
@@ -1009,7 +1009,7 @@ const hotels = [
     pricePerNight: 2700,
     amenities: ["Budget"],
     rooms: ROOM_TYPES,
-    images: ["/hotels/pan3.jpg"],
+    images: ["https://media.istockphoto.com/id/92007666/photo/posh-hotel-front.jpg?s=612x612&w=0&k=20&c=oJ_9x6kG-WO-8t_BIRWE3D4GN6pXLulmf7Lztr4Y-y8="],
   },
 
 ];

@@ -1,106 +1,61 @@
 "use client";
 
-interface Hotel {
-  id: number;
-  name: string;
-  city: string;
-  rating: number;
-  reviews: number;
-  pricePerNight: number;
-  amenities: string[];
-  images: string[];
-}
+import { useRouter } from "next/navigation";
 
-interface Props {
-  hotels: Hotel[];
-  sortBy: string;
-}
-
-export default function HotelResults({ hotels }: Props) {
-  if (!hotels.length) {
-    return (
-      <div className="md:col-span-3 flex items-center justify-center h-[300px] text-gray-600 text-lg">
-        No hotels found for this search.
-      </div>
-    );
-  }
+export default function HotelResults({ hotels }: any) {
+  const router = useRouter();
 
   return (
-    <div className="md:col-span-3 space-y-6">
-      {hotels.map((hotel, index) => (
-        <div
-          key={`${hotel.id}-${index}`}
-          className="relative bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 flex gap-6 border border-gray-100"
-        >
-          {/* IMAGE */}
-          <div className="relative">
+    <div className="bg-white rounded-2xl shadow-xl border h-[760px] flex flex-col">
+
+      <div className="px-6 py-4 border-b bg-[#FAF7F5]">
+        <h2 className="text-xl font-semibold text-[#4A3A34]">
+          Hotel Results
+        </h2>
+        <p className="text-sm text-gray-500">
+          {hotels.length} stays available
+        </p>
+      </div>
+
+      <div className="flex-1 overflow-y-auto px-6 py-5 space-y-6">
+        {hotels.map((hotel: any) => (
+          <div
+            key={hotel.id}
+            className="flex gap-5 p-4 border rounded-xl hover:shadow-lg transition"
+          >
             <img
-              src={hotel.images?.[0] || "/hotel-placeholder.jpg"}
-              alt={hotel.name}
-              className="w-48 h-36 object-cover rounded-xl"
+              src={hotel.images[0]}
+              className="w-48 h-32 object-cover rounded-xl"
             />
 
-            {/* RATING BADGE */}
-            <div className="absolute top-2 left-2 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded-lg shadow">
-              ⭐ {hotel.rating}
-            </div>
-          </div>
+            <div className="flex-1 space-y-2">
+              <h3 className="text-lg font-semibold">{hotel.name}</h3>
+              <p className="text-sm text-gray-500">📍 {hotel.city}</p>
+              <p className="text-sm">⭐ {hotel.rating}</p>
 
-          {/* DETAILS */}
-          <div className="flex-1 flex flex-col justify-between">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900">
-                {hotel.name}
-              </h3>
-
-              <p className="text-sm text-gray-500 mt-0.5">
-                {hotel.city}
-              </p>
-
-              <p className="mt-1 text-sm text-gray-600">
-                {hotel.reviews} verified reviews
-              </p>
-
-              {/* AMENITIES */}
-              <div className="mt-3 flex flex-wrap gap-2">
-                {hotel.amenities.slice(0, 5).map((a, i) => (
-                  <span
-                    key={i}
-                    className="text-xs bg-[#F2E9E4] text-[#22223B] px-3 py-1 rounded-full font-medium"
-                  >
+              <div className="flex flex-wrap gap-2">
+                {hotel.amenities.map((a: string) => (
+                  <span key={a} className="text-xs bg-[#F3E6E1] px-2 py-1 rounded-full">
                     {a}
                   </span>
                 ))}
-                {hotel.amenities.length > 5 && (
-                  <span className="text-xs text-gray-500">
-                    +{hotel.amenities.length - 5} more
-                  </span>
-                )}
               </div>
             </div>
-          </div>
 
-          {/* PRICE + CTA */}
-          <div className="flex flex-col justify-between items-end min-w-[140px]">
             <div className="text-right">
-              <p className="text-2xl font-bold text-green-600">
+              <p className="text-xl font-bold text-green-600">
                 ₹{hotel.pricePerNight}
               </p>
-              <p className="text-sm text-gray-500">per night</p>
-
-              <p className="mt-1 text-xs text-green-700 font-medium">
-                Free cancellation*
-              </p>
+              <button
+                onClick={() => router.push("/ticket/hotel")}
+                className="mt-3 bg-[#6B2F2F] text-white px-4 py-2 rounded-lg"
+              >
+                Book Now
+              </button>
             </div>
-
-            <button
-              className="mt-4 w-full bg-[#22223B] hover:bg-[#4A4E69] text-white text-sm font-semibold py-2.5 rounded-lg transition-colors duration-300"
-            >
-              Book Now
-            </button>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
