@@ -1,7 +1,13 @@
 "use client";
 
-import { isLoggedIn } from "@/src/utils/auth";
 import { useRouter } from "next/navigation";
+import { isLoggedIn } from "@/src/utils/auth";
+import {
+  MapPin,
+  Clock,
+  IndianRupee,
+  Ticket,
+} from "lucide-react";
 
 interface Props {
   data: any[];
@@ -21,20 +27,18 @@ export default function ResultsList({ data, type }: Props) {
     <div
       className="
         bg-white
-        rounded-[28px]
-        border
-        border-gray-200
+        rounded-3xl
+        border border-[#E6D5CE]
         shadow-xl
-        h-[1360px]           /* FIXED HEIGHT */
-        overflow-hidden
-        flex
-        flex-col
+        flex flex-col
+        max-h-[calc(500vh-30px)]
       "
     >
       {/* ================= HEADER ================= */}
-      <div className="px-6 py-6 border-b bg-gradient-to-r from-[#FAF7F5] to-[#F3E6E1]">
-        <h2 className="text-xl font-bold text-[#4A3A34] flex items-center gap-2">
-          📋 {type} Results
+      <div className="px-4 sm:px-6 py-4 sm:py-6 border-b bg-gradient-to-r from-[#FAF7F5] to-[#F3E6E1]">
+        <h2 className="text-lg sm:text-xl font-bold text-[#4A3A34] flex items-center gap-2">
+          <Ticket size={20} />
+          {type} Results
         </h2>
         <p className="text-sm text-gray-500 mt-1">
           {data.length} options available
@@ -42,10 +46,10 @@ export default function ResultsList({ data, type }: Props) {
       </div>
 
       {/* ================= SCROLLABLE LIST ================= */}
-      <div className="flex-1 overflow-y-auto px-6 py-5 space-y-5 scrollbar-thin scrollbar-thumb-[#D7C1B8] scrollbar-track-transparent">
+      <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-4 space-y-4 scrollbar-thin scrollbar-thumb-[#D7C1B8] scrollbar-track-transparent">
         {data.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-gray-500">
-            <span className="text-4xl mb-3">😕</span>
+          <div className="flex flex-col items-center justify-center h-full text-gray-500 text-center py-16">
+            <Ticket size={40} className="mb-3 opacity-50" />
             <p className="text-sm">
               No {type.toLowerCase()} found for selected route
             </p>
@@ -55,50 +59,47 @@ export default function ResultsList({ data, type }: Props) {
             <div
               key={`${item.id}-${index}`}
               className="
-                border
-                border-[#E6D5CE]
+                border border-[#E6D5CE]
                 rounded-2xl
-                p-5
-                flex
-                justify-between
-                items-center
+                p-4 sm:p-5
                 bg-white
                 transition-all
                 duration-300
-                hover:shadow-2xl
+                hover:shadow-xl
                 hover:-translate-y-1
+                flex flex-col sm:flex-row
+                sm:items-center
+                sm:justify-between
+                gap-4
               "
             >
               {/* -------- LEFT INFO -------- */}
-              <div className="space-y-1.5">
-                <h3 className="font-semibold text-lg text-[#4A3A34]">
+              <div className="space-y-1">
+                <h3 className="font-semibold text-base sm:text-lg text-[#4A3A34]">
                   {item.name}
                 </h3>
 
                 {item.from_city && item.to_city && (
-                  <p className="text-sm text-gray-500">
-                    📍 {item.from_city} → {item.to_city}
-                  </p>
-                )}
-
-                {item.type && (
-                  <p className="text-xs text-gray-400">
-                    {item.type}
+                  <p className="text-sm text-gray-500 flex items-center gap-1">
+                    <MapPin size={14} />
+                    {item.from_city} → {item.to_city}
                   </p>
                 )}
 
                 {item.departure && (
-                  <p className="text-sm text-gray-600">
-                    🕒 {item.departure} • {item.duration}
+                  <p className="text-sm text-gray-600 flex items-center gap-1">
+                    <Clock size={14} />
+                    {item.departure} • {item.duration}
                   </p>
                 )}
               </div>
 
               {/* -------- RIGHT ACTION -------- */}
-              <div className="text-right space-y-3">
-                <div>
-                  <p className="text-xl font-bold text-green-600">
-                    ₹{item.price}
+              <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-center gap-3 sm:gap-2">
+                <div className="text-left sm:text-right">
+                  <p className="text-lg sm:text-xl font-bold text-green-600 flex items-center gap-1">
+                    <IndianRupee size={16} />
+                    {item.price}
                   </p>
                   <p className="text-xs text-gray-500">
                     per seat
@@ -106,18 +107,15 @@ export default function ResultsList({ data, type }: Props) {
                 </div>
 
                 <button
-            
-  onClick={() => {
-    if (!isLoggedIn()) {
-      router.push("/auth/login");
-      return;
-    }
-    router.push(`/ticket/${ticketTypeMap[type]}`);
-  }}
- 
-
+                  onClick={() => {
+                    if (!isLoggedIn()) {
+                      router.push("/auth/login");
+                      return;
+                    }
+                    router.push(`/ticket/${ticketTypeMap[type]}`);
+                  }}
                   className="
-                    w-full
+                    w-full sm:w-auto
                     px-5
                     py-2.5
                     bg-gradient-to-r
@@ -133,7 +131,7 @@ export default function ResultsList({ data, type }: Props) {
                     transition-all
                   "
                 >
-                  Book Now →
+                  Book Now
                 </button>
               </div>
             </div>

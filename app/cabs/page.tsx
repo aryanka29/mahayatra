@@ -1,6 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import {
+  Search,
+  Filter,
+  Tag,
+  Car,
+  Wallet,
+  ShieldCheck,
+  Clock,
+  RefreshCcw,
+  Headphones,
+} from "lucide-react";
+
 import OfferSlider from "@/components/OfferSlider";
 import SearchBar from "@/components/SearchBar";
 import ResultsList from "@/components/ResultsList";
@@ -23,32 +35,32 @@ export default function CabsPage() {
 
   const CAB_FEATURES = [
     {
-      title: "Wide Range of Cab Options 🚗",
+      title: "Wide Range of Cab Options",
       description:
-        "Choose from hatchbacks, sedans, SUVs, luxury & outstation cabs.",
+        "Choose from hatchbacks, sedans, SUVs, luxury and outstation cabs.",
     },
     {
-      title: "Transparent Pricing 💰",
+      title: "Transparent Pricing",
       description:
         "No hidden charges. Pay exactly what you see at booking time.",
     },
     {
-      title: "Verified Professional Drivers 🧑‍✈️",
+      title: "Verified Professional Drivers",
       description:
-        "Experienced & background-verified drivers for a safe journey.",
+        "Experienced and background-verified drivers for safe journeys.",
     },
     {
-      title: "On-Time Pickup Guarantee ⏱️",
+      title: "On-Time Pickup Guarantee",
       description:
         "Reliable pickups with real-time driver tracking.",
     },
     {
-      title: "Easy Cancellation & Refunds 🔁",
+      title: "Easy Cancellation & Refunds",
       description:
         "Cancel easily with instant refunds on eligible rides.",
     },
     {
-      title: "24×7 Ride Support ☎️",
+      title: "24×7 Ride Support",
       description:
         "Customer support available anytime during your trip.",
     },
@@ -63,12 +75,12 @@ export default function CabsPage() {
       </div>
 
       {/* ================= MAIN CONTAINER ================= */}
-      <div className="max-w-[1480px] mx-auto px-6 mt-12 space-y-12">
+      <div className="max-w-[1480px] mx-auto px-4 sm:px-6 mt-12 space-y-14">
 
         {/* ================= SEARCH SECTION ================= */}
-        <div className="bg-white rounded-[28px] shadow-xl border border-gray-100 p-6">
-          <h2 className="text-xl font-semibold text-gray-800 mb-4 flex items-center gap-2">
-            🚕 Search Cabs
+        <div className="bg-white rounded-3xl shadow-xl border p-6 sm:p-8">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <Search size={20} /> Search Cabs
           </h2>
 
           <SearchBar
@@ -83,47 +95,78 @@ export default function CabsPage() {
         </div>
 
         {/* ================= FILTER + RESULTS ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
 
           {/* -------- LEFT SIDEBAR -------- */}
           <div className="space-y-10">
 
             {/* FILTER CARD */}
-            <div className="bg-white rounded-[26px] shadow-lg border p-5">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                🎛 Filter Your Ride
+            <div className="bg-white rounded-2xl shadow-md border p-6">
+              <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                <Filter size={18} /> Filter Your Ride
               </h3>
               <p className="text-sm text-gray-500 mb-4">
-                Choose cab type, price range & preferences
+                Choose cab type, pricing and preferences
               </p>
               <CabFilters />
             </div>
 
             {/* OFFERS CARD */}
-            <div className="bg-white rounded-[26px] shadow-lg border p-5 h-[830px]">
-              <h3 className="text-lg font-semibold text-gray-800 mb-3">
-                🎁 Exclusive Cab Deals
+            <div className="bg-white rounded-2xl shadow-md border p-6 h-[360px] lg:h-[830px]">
+              <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
+                <Tag size={18} /> Exclusive Cab Deals
               </h3>
               <p className="text-sm text-gray-500 mb-4">
-                Save more on city & outstation rides
+                Save more on city and outstation rides
               </p>
               <VerticalOfferSlider type="cabs" />
             </div>
           </div>
 
           {/* -------- RESULTS SECTION -------- */}
-          <div className="md:col-span-3">
-            <div className="bg-white rounded-[28px] shadow-xl border overflow-hidden">
+          <div className="lg:col-span-3">
+            <div className="bg-white rounded-3xl shadow-xl border overflow-hidden">
               <ResultsList data={results} type="Cabs" />
             </div>
           </div>
         </div>
 
         {/* ================= WHY CHOOSE US ================= */}
-        <div className="bg-white rounded-[32px] shadow-xl border p-12">
+        <div className="bg-white rounded-3xl shadow-xl border p-8 sm:p-12">
           <WhyChooseUs
             heading="Why Book Cabs on MahaYatra?"
-            features={CAB_FEATURES}
+            features={[
+              {
+                title: "Multiple Cab Categories",
+                description:
+                  "From budget rides to luxury cars for every travel need.",
+              },
+              {
+                title: "Transparent Pricing",
+                description:
+                  "Clear fare breakup with no last-minute surprises.",
+              },
+              {
+                title: "Safe & Verified Drivers",
+                description:
+                  "Professionally trained and verified drivers.",
+              },
+              {
+                title: "On-Time Pickup",
+                description:
+                  "Accurate pickup times with live tracking.",
+              },
+              {
+                title: "Easy Refunds",
+                description:
+                  "Quick refunds on eligible cancellations.",
+              },
+              {
+                title: "24×7 Support",
+                description:
+                  "Assistance available anytime during your ride.",
+              },
+            ]}
           />
         </div>
       </div>

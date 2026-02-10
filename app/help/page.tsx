@@ -1,18 +1,30 @@
 "use client";
 
+import {
+  Phone,
+  Mail,
+  HelpCircle,
+  Bus,
+  RefreshCcw,
+  CreditCard,
+  MapPin,
+  FileText,
+  ShieldCheck,
+  Headphones,
+} from "lucide-react";
+
 export default function HelpPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#F4ECE9] to-[#EADBD6] py-16">
-      <div className="max-w-7xl mx-auto px-6 space-y-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 space-y-16">
 
-        {/* ================= HEADER ================= */}
+        {/* HEADER */}
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-[#4A3A34]">
-            🤝 Need Help with MahaYatra?
+          <h1 className="text-3xl sm:text-4xl font-bold text-[#4A3A34] flex justify-center gap-2">
+            <Headphones /> MahaYatra Help & Support
           </h1>
-          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-lg">
-            From booking your tickets to managing refunds and travel support,
-            MahaYatra is here to assist you every step of the journey.
+          <p className="mt-4 text-gray-600 max-w-3xl mx-auto text-sm sm:text-lg">
+            Booking help, cancellations, refunds and travel support — all in one place.
           </p>
 
           <div className="mt-6 flex justify-center">
@@ -20,138 +32,89 @@ export default function HelpPage() {
           </div>
         </div>
 
-        {/* ================= QUICK HELP CARDS ================= */}
+        {/* QUICK HELP */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-          {/* SUPPORT */}
-          <div className="bg-white rounded-[28px] shadow-xl border border-[#E5D6D0] p-8 hover:shadow-2xl transition">
-            <div className="text-4xl mb-4">📞</div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              24×7 Customer Support
-            </h2>
-            <p className="text-gray-600 text-sm mb-4">
-              Get instant help for bookings, cancellations, refunds, or
-              technical issues anytime, anywhere.
-            </p>
-            <p className="font-bold text-[#8D5B4C]">
-              Call: 080-6824-3910
-            </p>
-          </div>
+          <SupportCard
+            icon={<Phone />}
+            title="24×7 Customer Support"
+            desc="Instant help for bookings, cancellations, refunds and technical issues."
+            value="080-6824-3910"
+          />
 
-          {/* EMAIL */}
-          <div className="bg-white rounded-[28px] shadow-xl border border-[#E5D6D0] p-8 hover:shadow-2xl transition">
-            <div className="text-4xl mb-4">📧</div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              Email Support
-            </h2>
-            <p className="text-gray-600 text-sm mb-4">
-              Need detailed assistance? Write to us for refunds, invoices,
-              or corporate travel queries.
-            </p>
-            <p className="font-bold text-[#8D5B4C]">
-              support@mahayatra.com
-            </p>
-          </div>
+          <SupportCard
+            icon={<Mail />}
+            title="Email Support"
+            desc="Detailed assistance for refunds, invoices and corporate travel."
+            value="support@mahayatra.com"
+          />
 
-          {/* FAQ */}
-          <div className="bg-white rounded-[28px] shadow-xl border border-[#E5D6D0] p-8 hover:shadow-2xl transition">
-            <div className="text-4xl mb-4">❓</div>
-            <h2 className="text-xl font-semibold text-gray-800 mb-2">
-              FAQs & Refunds
-            </h2>
-            <p className="text-gray-600 text-sm mb-4">
-              Find quick answers about buses, trains, cabs, hotels,
-              payments, and cancellation policies.
-            </p>
-            <span className="inline-block text-[#8D5B4C] font-semibold">
-              Explore FAQs →
-            </span>
-          </div>
+          <SupportCard
+            icon={<HelpCircle />}
+            title="FAQs & Refunds"
+            desc="Quick answers for buses, trains, cabs, hotels & payments."
+            value="Explore FAQs"
+            isLink
+          />
         </div>
 
-        {/* ================= SUPPORT DETAILS ================= */}
-        <div className="bg-white rounded-[32px] shadow-2xl border border-[#E5D6D0] p-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+        {/* SUPPORT DETAILS */}
+        <div className="bg-white rounded-3xl shadow-2xl border p-8 sm:p-12">
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">
             How MahaYatra Supports You
           </h2>
 
           <p className="text-gray-600 mb-10 max-w-4xl">
-            MahaYatra offers complete end-to-end travel assistance.
-            Whether you are planning, booking, tracking, or modifying
-            your journey, our systems and support team ensure a smooth experience.
+            End-to-end travel assistance — from planning to post-booking support.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-            <SupportItem
-              icon="🚌"
-              title="All Travel Bookings"
-              desc="Support for bus, train, cab, and hotel bookings with real-time availability and instant confirmations."
-            />
-
-            <SupportItem
-              icon="🔄"
-              title="Cancellations & Refunds"
-              desc="Fast and transparent cancellation handling with instant or scheduled refunds."
-            />
-
-            <SupportItem
-              icon="💳"
-              title="Payments & Transactions"
-              desc="Help with failed payments, double charges, UPI issues, invoices, and billing queries."
-            />
-
-            <SupportItem
-              icon="📍"
-              title="Live Tracking & Status"
-              desc="Track buses and cabs live, check train running status, and booking progress."
-            />
-
-            <SupportItem
-              icon="🧾"
-              title="Booking Modifications"
-              desc="Assistance with rescheduling, passenger updates, seat changes, and room upgrades."
-            />
-
-            <SupportItem
-              icon="🔐"
-              title="Account & Security"
-              desc="Support for account access, profile issues, and keeping your bookings secure."
-            />
+            <SupportItem icon={<Bus />} title="All Travel Bookings" />
+            <SupportItem icon={<RefreshCcw />} title="Cancellations & Refunds" />
+            <SupportItem icon={<CreditCard />} title="Payments & Billing" />
+            <SupportItem icon={<MapPin />} title="Live Tracking & Status" />
+            <SupportItem icon={<FileText />} title="Booking Modifications" />
+            <SupportItem icon={<ShieldCheck />} title="Account & Security" />
           </div>
         </div>
 
-        {/* ================= FOOT NOTE ================= */}
         <div className="text-center text-gray-500 text-sm">
-          ✨ MahaYatra is committed to making your travel smooth, affordable,
-          and completely stress-free.
+          MahaYatra is committed to making travel simple, secure and stress-free.
         </div>
-
       </div>
     </div>
   );
 }
 
-/* ================= SUPPORT ITEM COMPONENT ================= */
+/* ================= COMPONENTS ================= */
 
-function SupportItem({
+function SupportCard({
   icon,
   title,
   desc,
-}: {
-  icon: string;
-  title: string;
-  desc: string;
-}) {
+  value,
+  isLink = false,
+}: any) {
   return (
-    <div className="flex gap-5">
-      <div className="text-3xl">{icon}</div>
+    <div className="bg-white rounded-3xl shadow-xl border p-8 hover:shadow-2xl transition">
+      <div className="mb-4 text-[#8D5B4C]">{icon}</div>
+      <h2 className="text-xl font-semibold text-gray-800 mb-2">{title}</h2>
+      <p className="text-gray-600 text-sm mb-4">{desc}</p>
+      <p className="font-bold text-[#8D5B4C]">
+        {value}
+      </p>
+    </div>
+  );
+}
+
+function SupportItem({ icon, title }: any) {
+  return (
+    <div className="flex gap-4 items-start">
+      <div className="text-[#8D5B4C]">{icon}</div>
       <div>
-        <h3 className="font-semibold text-gray-800 mb-1">
-          {title}
-        </h3>
-        <p className="text-sm text-gray-600 leading-relaxed">
-          {desc}
+        <h3 className="font-semibold text-gray-800">{title}</h3>
+        <p className="text-sm text-gray-600">
+          Professional assistance provided by our support team.
         </p>
       </div>
     </div>

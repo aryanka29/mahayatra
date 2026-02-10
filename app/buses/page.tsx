@@ -1,6 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import {
+  Search,
+  Filter,
+  Tag,
+  ShieldCheck,
+  Zap,
+  Wallet,
+  MapPin,
+  Headphones,
+  Bus,
+} from "lucide-react";
+
 import OfferSlider from "@/components/OfferSlider";
 import SearchBar from "@/components/SearchBar";
 import ResultsList from "@/components/ResultsList";
@@ -23,52 +35,52 @@ export default function BusesPage() {
 
   const BUS_FEATURES = [
     {
-      title: "🚌 India’s Trusted Bus Booking",
+      title: "India’s Trusted Bus Booking",
       description:
-        "Book verified government & private buses with accurate schedules and transparent pricing.",
+        "Book verified government and private buses with accurate schedules and transparent pricing.",
     },
     {
-      title: "🔐 Secure & Flexible Payments",
+      title: "Secure & Flexible Payments",
       description:
-        "UPI, cards & net banking with bank-grade security and encryption.",
+        "Pay safely using UPI, cards and net banking with bank-grade encryption.",
     },
     {
-      title: "⚡ Instant Confirmation",
+      title: "Instant Ticket Confirmation",
       description:
-        "Real-time seat availability with immediate ticket confirmation.",
+        "Real-time seat availability with immediate booking confirmation.",
     },
     {
-      title: "💸 Easy Cancellation & Refunds",
+      title: "Easy Cancellation & Refunds",
       description:
-        "Cancel eligible tickets easily with fast refunds.",
+        "Cancel eligible tickets effortlessly with fast refunds.",
     },
     {
-      title: "📍 Live Bus Tracking",
+      title: "Live Bus Tracking",
       description:
         "Track your bus in real-time and stay updated on arrival status.",
     },
     {
-      title: "📞 24×7 Customer Support",
+      title: "24×7 Customer Support",
       description:
-        "Dedicated support available anytime for your journey.",
+        "Dedicated support team available anytime during your journey.",
     },
   ];
 
   return (
     <div className="bg-gradient-to-b from-[#F6EEEB] via-[#EEDFD9] to-[#EADBD6] min-h-screen pb-32">
 
-      {/* ===== TOP OFFERS ===== */}
+      {/* ================= TOP OFFERS ================= */}
       <div className="shadow-sm">
-        <OfferSlider title="🔥 Trending Bus Offers" folder="buses" />
+        <OfferSlider title="Trending Bus Offers" folder="buses" />
       </div>
 
-      {/* ===== MAIN CONTAINER ===== */}
-      <div className="max-w-[1480px] mx-auto px-6 mt-14 space-y-14">
+      {/* ================= MAIN CONTAINER ================= */}
+      <div className="max-w-[1480px] mx-auto px-4 sm:px-6 mt-12 space-y-14">
 
-        {/* SEARCH CARD */}
-        <div className="bg-white rounded-[30px] shadow-2xl border p-8">
-          <h2 className="text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
-            🔍 Search Bus Tickets
+        {/* ================= SEARCH CARD ================= */}
+        <div className="bg-white rounded-3xl shadow-xl border p-6 sm:p-8">
+          <h2 className="text-lg sm:text-xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+            <Search size={20} /> Search Bus Tickets
           </h2>
 
           <SearchBar
@@ -82,47 +94,79 @@ export default function BusesPage() {
           />
         </div>
 
-        {/* FILTER + RESULTS */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        {/* ================= FILTER + RESULTS ================= */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
 
-          {/* LEFT PANEL */}
+          {/* -------- LEFT PANEL -------- */}
           <div className="space-y-10">
+
             {/* FILTERS */}
-            <div className="bg-white rounded-[26px] shadow-lg border p-6">
+            <div className="bg-white rounded-2xl shadow-md border p-6">
               <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
-                🎯 Filters & Preferences
+                <Filter size={18} /> Filters & Preferences
               </h3>
               <p className="text-sm text-gray-500 mb-4">
-                Narrow results by price, bus type & timings
+                Refine buses by price, type and timings
               </p>
               <BusFilters />
             </div>
 
-            {/* OFFERS */}
-            <div className="bg-white rounded-[26px] shadow-lg border p-6 h-[840px]">
+            {/* VERTICAL OFFERS */}
+            <div className="bg-white rounded-2xl shadow-md border p-6 h-[360px] lg:h-[840px]">
               <h3 className="text-lg font-semibold text-gray-800 mb-1 flex items-center gap-2">
-                🎁 Exclusive Deals
+                <Tag size={18} /> Exclusive Deals
               </h3>
               <p className="text-sm text-gray-500 mb-4">
-                Handpicked savings just for you
+                Handpicked savings for your journey
               </p>
               <VerticalOfferSlider type="buses" />
             </div>
           </div>
 
-          {/* RESULTS */}
-          <div className="md:col-span-3">
-            <div className="bg-white rounded-[30px] shadow-2xl border overflow-hidden">
+          {/* -------- RESULTS -------- */}
+          <div className="lg:col-span-3">
+            <div className="bg-white rounded-3xl shadow-xl border overflow-hidden">
               <ResultsList data={results} type="Buses" />
             </div>
           </div>
         </div>
 
-        {/* WHY CHOOSE US */}
-        <div className="bg-white rounded-[32px] shadow-xl border p-12">
+        {/* ================= WHY CHOOSE US ================= */}
+        <div className="bg-white rounded-3xl shadow-xl border p-8 sm:p-12">
           <WhyChooseUs
             heading="Why Book Bus Tickets on MahaYatra?"
-            features={BUS_FEATURES}
+            features={[
+              {
+                title: "Wide Bus Network",
+                description:
+                  "Access thousands of routes across India with trusted operators.",
+              },
+              {
+                title: "Secure Payments",
+                description:
+                  "Encrypted and safe payments via UPI, cards and net banking.",
+              },
+              {
+                title: "Instant Confirmation",
+                description:
+                  "Book seats instantly with real-time availability.",
+              },
+              {
+                title: "Hassle-Free Refunds",
+                description:
+                  "Easy cancellation with quick refunds on eligible bookings.",
+              },
+              {
+                title: "Live Tracking",
+                description:
+                  "Track buses and stay informed throughout your journey.",
+              },
+              {
+                title: "24×7 Support",
+                description:
+                  "Dedicated travel support whenever you need help.",
+              },
+            ]}
           />
         </div>
       </div>

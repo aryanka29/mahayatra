@@ -1,6 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import {
+  Search,
+  SlidersHorizontal,
+  BadgePercent,
+  BedDouble,
+  RefreshCcw,
+  Star,
+  ShieldCheck,
+  Headphones,
+  Building2,
+} from "lucide-react";
 
 import HotelSearchBar from "@/components/HotelSearchBar";
 import HotelSortBar from "@/components/HotelSortBar";
@@ -12,7 +23,6 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import hotelsData from "@/data/hotels";
 
 /* ---------------- TYPES ---------------- */
-
 type Hotel = {
   id: number;
   name: string;
@@ -21,7 +31,6 @@ type Hotel = {
   reviews: number;
   pricePerNight: number;
   amenities: string[];
-  rooms?: { type: string; capacity: number }[];
   images: string[];
 };
 
@@ -30,42 +39,40 @@ type HotelSearchData = {
 };
 
 /* ---------------- FEATURES ---------------- */
-
 const HOTEL_FEATURES = [
   {
-    title: "🏷 Best Price Guarantee",
+    title: "Best Price Guarantee",
     description:
-      "Book hotels at the lowest available prices with exclusive MahaYatra offers.",
+      "Get the lowest hotel prices with exclusive MahaYatra offers.",
   },
   {
-    title: "🛏 Multiple Room Categories",
+    title: "Multiple Room Categories",
     description:
-      "Choose from single, double, family, luxury and premium rooms.",
+      "Single, double, family, luxury and premium stays available.",
   },
   {
-    title: "🔄 Free Cancellation",
+    title: "Free Cancellation",
     description:
       "Flexible cancellation with instant refunds on select hotels.",
   },
   {
-    title: "⭐ Verified Guest Reviews",
+    title: "Verified Guest Reviews",
     description:
-      "Make informed choices using genuine guest ratings and reviews.",
+      "Book confidently using trusted guest ratings and reviews.",
   },
   {
-    title: "🔐 Secure Payments",
+    title: "Secure Payments",
     description:
-      "UPI, cards & net banking with fully encrypted transactions.",
+      "Encrypted UPI, card and net banking transactions.",
   },
   {
-    title: "📞 24×7 Support",
+    title: "24×7 Support",
     description:
-      "Our hotel booking experts are available round-the-clock.",
+      "Hotel booking assistance anytime, anywhere.",
   },
 ];
 
 /* ---------------- PAGE ---------------- */
-
 export default function HotelsPage() {
   const [hotels, setHotels] = useState<Hotel[]>(hotelsData);
   const [sortBy, setSortBy] = useState("recommended");
@@ -78,59 +85,60 @@ export default function HotelsPage() {
 
   const handleSearch = (searchData: HotelSearchData) => {
     setIsSearched(true);
-
     const filtered = hotelsData.filter((hotel) =>
       hotel.city.toLowerCase().includes(searchData.destination.toLowerCase())
     );
-
     setHotels(filtered);
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#EFE4E0] to-[#EADBD6] min-h-screen pb-20">
+    <div className="bg-gradient-to-b from-[#F4ECE9] to-[#EADBD6] min-h-screen pb-24">
 
-      {/* ================= HERO / SEARCH ================= */}
-      <div className="max-w-[1400px] mx-auto px-6 pt-10 space-y-6">
+      <div className="max-w-[1480px] mx-auto px-4 sm:px-6 pt-10 space-y-10">
 
+        {/* HERO */}
         <div className="text-center space-y-2">
-          <h1 className="text-3xl md:text-4xl font-bold text-[#4A3A34]">
-            🏨 Find the Perfect Stay
+          <h1 className="text-2xl sm:text-4xl font-bold text-[#4A3A34] flex justify-center gap-2">
+            <Building2 /> Find Your Perfect Stay
           </h1>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover hotels, resorts & luxury stays at the best prices across India
+          <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+            Discover hotels, resorts & luxury stays across India
           </p>
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl p-6 border">
+        {/* SEARCH */}
+        <div className="bg-white rounded-3xl shadow-xl border p-5 sm:p-6">
           <HotelSearchBar onSearch={handleSearch} />
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md border px-4 py-3">
+        {/* SORT */}
+        <div className="bg-white rounded-2xl shadow border p-4">
           <HotelSortBar sortBy={sortBy} setSortBy={setSortBy} />
         </div>
 
-        {/* ================= MAIN GRID ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        {/* MAIN GRID */}
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
 
           {/* FILTERS */}
-          <div className="sticky top-28 h-fit">
+          <div className="lg:sticky lg:top-28 h-fit bg-white rounded-2xl shadow-md border p-4">
+            <h3 className="font-semibold flex items-center gap-2 mb-3">
+              <SlidersHorizontal size={18} /> Filters
+            </h3>
             <HotelFilters />
           </div>
 
           {/* RESULTS */}
-          <div className="md:col-span-3 space-y-6">
+          <div className="lg:col-span-3 space-y-8">
 
-            {/* DISCOVERY SLIDER */}
             {!isSearched && (
-              <div >
-                <h2 className="text-xl font-semibold text-[#4A3A34] mb-4">
-                  ✨ Popular Hotels & Trending Stays
+              <div>
+                <h2 className="text-lg font-semibold text-[#4A3A34] mb-4 flex items-center gap-2">
+                  <Star size={18} /> Popular & Trending Hotels
                 </h2>
                 <VerticalHotelSlider hotels={hotelsData} />
               </div>
             )}
 
-            {/* SEARCH RESULTS */}
             {isSearched && (
               <div className="bg-white rounded-3xl shadow-xl border">
                 <HotelResults hotels={hotels} sortBy={sortBy} />
@@ -139,8 +147,8 @@ export default function HotelsPage() {
           </div>
         </div>
 
-        {/* ================= WHY CHOOSE US ================= */}
-        <div className="mt-20 bg-white rounded-3xl shadow-xl p-12 border">
+        {/* WHY CHOOSE US */}
+        <div className="bg-white rounded-3xl shadow-xl border p-8 sm:p-12">
           <WhyChooseUs
             heading="Why Book Hotels on MahaYatra?"
             features={HOTEL_FEATURES}

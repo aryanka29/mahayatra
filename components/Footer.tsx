@@ -1,125 +1,145 @@
 "use client";
 
+import {
+  Bus,
+  Train,
+  Car,
+  Hotel,
+  MapPin,
+  Info,
+  Phone,
+  Mail,
+  Facebook,
+  Twitter,
+  Instagram,
+  Linkedin,
+  Star,
+  Users,
+  Globe,
+} from "lucide-react";
+
 export default function Footer() {
   return (
-    <footer className="relative mt-24 bg-gradient-to-br from-[#2F2420] via-[#3F2F2A] to-[#5A3E35] text-[#F5F1EF]">
-      
-      {/* SOFT TOP GLOW */}
-      <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
+    <footer className="mt-24 bg-gradient-to-b from-[#2F2420] to-[#3A2B26] text-[#F5F1EF]">
+      <div className="max-w-7xl mx-auto px-6 py-16">
 
-      <div className="relative max-w-7xl mx-auto px-6 py-16">
+        {/* ================= TOP GRID ================= */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
-        {/* TOP GRID */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12">
-
-          {/* BRAND / APP */}
+          {/* BRAND */}
           <div>
-            <h3 className="text-2xl font-bold tracking-wide text-white mb-4">
+            <h3 className="text-2xl font-bold text-white mb-4">
               MahaYatra
             </h3>
+
             <p className="text-sm leading-relaxed text-[#EADBD6]">
-              Your trusted travel partner for buses, trains, cabs, hotels
-              and unforgettable journeys across India.
+              MahaYatra is your trusted travel companion for booking buses,
+              trains, cabs and hotels across India with ease and confidence.
             </p>
 
-            <div className="mt-5 flex items-center gap-2 text-sm">
-              <span className="px-3 py-1 bg-white/10 rounded-full">
-                ⭐ 4.1 App Rating
+            <div className="mt-5 flex flex-wrap gap-3 text-sm">
+              <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-white/10">
+                <Star size={14} /> 4.1 Rating
               </span>
-              <span className="px-3 py-1 bg-white/10 rounded-full">
-                🚀 10M+ Users
+              <span className="flex items-center gap-1 px-3 py-1 rounded-full bg-white/10">
+                <Users size={14} /> 10M+ Users
               </span>
             </div>
           </div>
 
           {/* SERVICES */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
-              🚍 Services
+            <h4 className="flex items-center gap-2 text-lg font-semibold text-white mb-4">
+              <Bus size={18} /> Services
             </h4>
+
             <ul className="space-y-2 text-sm text-[#EADBD6]">
-              {[
-                "Bus Booking",
-                "Train Tickets",
-                "Cab Rentals",
-                "Hotel Booking",
-                "Tour Packages",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="hover:text-white hover:translate-x-1 transition cursor-pointer"
-                >
-                  → {item}
-                </li>
-              ))}
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Bus size={14} /> Bus Booking
+              </li>
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Train size={14} /> Train Tickets
+              </li>
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Car size={14} /> Cab Rentals
+              </li>
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Hotel size={14} /> Hotel Booking
+              </li>
             </ul>
           </div>
 
           {/* POPULAR CITIES */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
-              📍 Popular Cities
+            <h4 className="flex items-center gap-2 text-lg font-semibold text-white mb-4">
+              <MapPin size={18} /> Popular Cities
             </h4>
+
             <ul className="space-y-2 text-sm text-[#EADBD6]">
-              {[
-                "Pune",
-                "Mumbai",
-                "AhilyaNagar",
-                "Dhule",
-                "Nashik",
-                "Latur",
-              ].map((city) => (
-                <li key={city} className="hover:text-white transition">
-                  {city}
-                </li>
-              ))}
+              {["Mumbai", "Pune", "Nashik", "Nagpur", "Latur", "Kolhapur"].map(
+                (city) => (
+                  <li key={city} className="hover:text-white transition">
+                    {city}
+                  </li>
+                )
+              )}
             </ul>
           </div>
 
-          {/* ABOUT */}
+          {/* SUPPORT / ABOUT */}
           <div>
-            <h4 className="text-lg font-semibold text-white mb-4">
-              ℹ️ About
+            <h4 className="flex items-center gap-2 text-lg font-semibold text-white mb-4">
+              <Info size={18} /> Support
             </h4>
+
             <ul className="space-y-2 text-sm text-[#EADBD6]">
-              {[
-                "About Us",
-                "FAQs",
-                "Privacy Policy",
-                "Terms & Conditions",
-                "Contact Support",
-              ].map((item) => (
-                <li
-                  key={item}
-                  className="hover:text-white hover:translate-x-1 transition cursor-pointer"
-                >
-                  → {item}
-                </li>
-              ))}
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Phone size={14} /> 24×7 Customer Care
+              </li>
+              <li className="flex items-center gap-2 hover:text-white transition">
+                <Mail size={14} /> support@mahayatra.com
+              </li>
+              <li className="hover:text-white transition">
+                Privacy Policy
+              </li>
+              <li className="hover:text-white transition">
+                Terms & Conditions
+              </li>
             </ul>
           </div>
         </div>
 
-        {/* DIVIDER */}
+        {/* ================= DIVIDER ================= */}
         <div className="my-12 border-t border-white/15" />
 
-        {/* BOTTOM BAR */}
+        {/* ================= BOTTOM BAR ================= */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#EADBD6]">
 
-          <p>
-            © 2026 <span className="text-white font-semibold">MahaYatra</span>. All rights reserved.
+          <p className="text-center md:text-left">
+            © 2026{" "}
+            <span className="font-semibold text-white">MahaYatra</span>.  
+            All rights reserved.
           </p>
 
-          {/* SOCIALS */}
-          <div className="flex gap-5 text-lg">
-            <span className="hover:text-white transition cursor-pointer">🌐</span>
-            <span className="hover:text-white transition cursor-pointer">📘</span>
-            <span className="hover:text-white transition cursor-pointer">🐦</span>
-            <span className="hover:text-white transition cursor-pointer">📸</span>
-            <span className="hover:text-white transition cursor-pointer">💼</span>
+          {/* SOCIAL ICONS */}
+          <div className="flex items-center gap-5">
+            <a className="hover:text-white transition" href="#">
+              <Globe size={18} />
+            </a>
+            <a className="hover:text-white transition" href="#">
+              <Facebook size={18} />
+            </a>
+            <a className="hover:text-white transition" href="#">
+              <Twitter size={18} />
+            </a>
+            <a className="hover:text-white transition" href="#">
+              <Instagram size={18} />
+            </a>
+            <a className="hover:text-white transition" href="#">
+              <Linkedin size={18} />
+            </a>
           </div>
         </div>
-
       </div>
     </footer>
   );
